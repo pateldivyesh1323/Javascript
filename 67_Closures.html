@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    
+    <script>
+        // Closure is function binded with its Lexicle Enviroment. It will give references of the variables.
+        message = "I am Outside";
+
+        function outer(){
+            let message = "I am inside of Outer";
+            let innerFunc = ()=>{
+                console.log(message);
+            }
+            return innerFunc;
+        }
+
+        innerFunc = outer();
+        innerFunc();
+    </script>
+</body>
+</html>

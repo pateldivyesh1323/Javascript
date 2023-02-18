@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+        // Destructuring assignment is used to unpack values from an array or properties from objects into distinct variables. http://css.glass
+        let arr = [14,15];
+        let [a,b] = arr;
+        console.log(a,b);
+
+        let arr2 = [25,31,10,90,64,10,80];
+        let [c,d,e,f,...rest] = arr2;
+        console.log(c,d,e,f,rest) 
+    </script>
+</body>
+</html>

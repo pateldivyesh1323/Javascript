@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    
+    <script>
+        // Javascript moves the variable,function and class declarations on top of code before executing it.
+        // Note : It will not move the value with which the variable was initializd.
+
+        console.log("Before Initialization value of A = ",a); // This does not work same for "let" and "const".
+        greet();
+        function greet()
+        {
+            console.log("Greeting");
+        }
+
+        var a = 90;
+        console.log("After Initialization value of A = ",a);
+
+    </script>
+</body>
+</html>

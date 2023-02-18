@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Browser Events</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Open Console to see Changes.</p>
+        <button onclick="console.log('You clicked(Using HTML)')" style="cursor:pointer">click Me</button>
+        <button onmouseenter="console.log('Mouse Entered the box(Using HTML)')">Enter pointer in me</button>
+    </div>
+    <script>
+        let a = document.getElementsByTagName("button")[0];
+        a.onclick = ()=>{
+            console.log("You Clicked(Using JavaScript)");
+        }
+    </script>
+</body>
+</html>

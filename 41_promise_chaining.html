@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Chaining</title>
+</head>
+
+<body>
+
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Resolved after two Seconds");
+            }, 1000)
+        }).then((value) => {
+            console.log(value);
+
+            let p2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("Resolved P2");
+                }, 2000)
+            })
+            return p2;
+
+        }).then((value) => {
+            console.log("We are Done.");
+            return 2;
+        }).then((value) => {
+            console.log("We are Finally Done");
+        })
+
+    </script>
+</body>
+
+</html>

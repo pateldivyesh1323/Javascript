@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Name and Class List</title>
+    <style>
+        .yellow{
+            background-color: yellow;
+            color: red;   
+        }
+        .red
+        {
+            background-color: red;
+            color: yellow;
+        }
+        .textdark
+        {
+            color: black;
+        }
+        .textlight
+        {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="first" class="red textlight">
+        <span>Hey I am Good.</span>
+    </div>
+    <script>
+        first.className="textdark";
+        first.classList.add("red");
+        first.classList.remove("red");
+        first.classList.toggle("yellow");
+        console.log(first.classList.contains("red"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter and Setter</title>
+</head>
+
+<body>
+
+    <script>
+        class Animal {
+            constructor(name) {
+                this.name = name
+            }
+            walk() {
+                console.log(`${this.name} is Walking.`)
+            }
+            eat() {
+                console.log(`${this.name} is Eating.`)
+            }
+            // Getter 
+            get getName(){
+                return this.name;
+            }
+            // Setter
+            set setName(name){
+                this.name = name;
+            }
+        }
+
+        let tommy = new Animal("Tommy");
+        tommy.walk();
+        tommy.setName = "Chimpanzee";
+        console.log(tommy.getName);
+        tommy.eat();
+
+        // instanceof operator is used to check if an Object belogns to a particular class. 
+        let a = 50;
+        console.log(tommy instanceof Animal)
+        console.log(a instanceof Animal)
+    </script>
+</body>
+
+</html>

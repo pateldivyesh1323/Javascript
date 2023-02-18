@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sending Post request with fetch API</title>
+</head>
+
+<body>
+
+    <script>
+        const createTodo = async () => {
+            let options = {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                // JSON.stringify converts a javascript object to string
+                // JSON.parse converts a valid string to a javascript object
+                body: JSON.stringify({
+                    id: 1,
+                    title: 'Patel',
+                    body: 'Divyesh',
+                    userId: 17,
+                })
+            }
+            let p = await fetch('https://jsonplaceholder.typicode.com/posts', options)
+            let response = await p.json();
+            return response;
+        }
+
+
+        const mainFunc = async ()=>{
+            let todo = await createTodo();
+            console.log(todo);
+        }
+        mainFunc();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <div class="api">
+        <p id="apidata"></p>
+    </div>
+    <script>
+        let url = "https://api.covid19api.com/summary"
+
+        // Method 1:
+        
+        // let covid1 = fetch(url)
+        // covid1.then((apidata)=>{
+        //     return apidata.json();
+        // }).then((actualdata)=>{
+        //     let apidata = document.getElementById("apidata");
+        //     console.log(actualdata);
+        //     let countryindia = actualdata.Countries[77];
+        //     apidata.innerText = `${apidata.innerText}Country: ${countryindia.Country}\n`;
+        //     apidata.innerText = `${apidata.innerText}New Confirmed Cases: ${countryindia.NewConfirmed}\n`;
+        //     apidata.innerText = `${apidata.innerText}New Deaths: ${countryindia.NewDeaths}\n`;
+        // }).catch((error)=>{
+        //     console.log(`Caught an Error : ${error}`);
+        // })
+
+        // Method 2:
+
+        let getData = async()=>{
+            let data = await fetch(url);
+            let parsedData = await data.json();
+            console.log(parsedData)
+        }
+        getData();
+        
+    </script>
+</body>
+</html>

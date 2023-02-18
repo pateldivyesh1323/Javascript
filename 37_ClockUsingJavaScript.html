@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        .clock
+        {
+            margin-top: 100px;
+        }
+        .time
+        {
+            padding-left: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 50px;
+            border: 10px solid black;
+            background-color:whitesmoke;
+            width: 400px;
+            font-weight: 900;
+        }
+        .date
+        {
+            padding-left: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 400px;
+            font-weight: 900;
+            font-size: 50px;
+            border-top: 0px;
+            border-left: 10px solid black;
+            border-right: 10px solid black;
+            border-bottom: 10px solid black;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div style="display: flex ;justify-content:center"><div class="time">Time:
+            <span id="hour"></span>
+            <span id ="minutes"></span>
+            <span id="seconds"></span></div>
+        </div>
+        <div style="display: flex ;justify-content:center"><div class="date">
+            Date:
+            <span id="date"></span>
+            <span id="month"></span>
+            <span id="year"></span>
+        </div></div>
+        </div>
+    <script>
+        const digiCLock=()=>{
+            let a = new Date();
+            let h = a.getHours();
+            let m = a.getMinutes();
+            let s = a.getSeconds();
+            let d = a.getDate();
+            let mth = a.getMonth()+1;
+            let y = a.getFullYear();
+            
+            document.getElementById("hour").innerHTML=h+" :";
+            document.getElementById("minutes").innerHTML=m+" :";
+            if(s<10)
+            {
+                document.getElementById("seconds").innerHTML="0"+s;
+            }
+            else
+            {
+                document.getElementById("seconds").innerHTML=s;
+            }
+            document.getElementById("date").innerHTML=d+" :";
+            document.getElementById("month").innerHTML=mth+" :";
+            document.getElementById("year").innerHTML=y;
+        }
+        setInterval(digiCLock,1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritence</title>
+</head>
+<body>
+    
+    <script>
+        class Animal{
+            constructor(name,limbs,color){
+                this.name = name;
+                this.limbs = limbs;
+                this.color = color;
+            }
+            run(){
+                console.log(this.name + " is Running.");
+            }
+            shout(){
+                console.log(this.name + " is Shouting.");
+            }
+            sleep(){
+                console.log(this.name + " is Sleeping.");
+            }
+        }
+        class Monkey extends Animal{
+            eat(){
+                console.log(this.name + " is eating Banana.");
+            }
+            climb(){
+                console.log(this.name + " is climbing a tree.");
+            }
+        }
+
+        let namuna = new Monkey("Namuna");
+        namuna.sleep();
+        namuna.eat();
+        namuna.climb();
+
+        let tommy = new Animal("Tommy");
+        try{
+            tommy.climb();
+        }
+        catch(error)
+        {
+            console.log(error);
+        }
+
+    </script>
+</body>
+</html>

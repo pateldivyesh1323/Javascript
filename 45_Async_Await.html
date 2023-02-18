@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await</title>
+</head>
+
+<body>
+
+    <script>
+        // async function fun1(){
+        //     return 5000;
+        // }
+
+        // fun1().then((value)=>{
+        //     console.log(value);
+        // })
+
+        async function fun2() {
+            let score1 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(500);
+                }, 2000)
+            })
+
+            let score2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(300);
+                }, 4000)
+            })
+            console.log("Getting Score 1 ...")
+            let s1 = await score1;
+            console.log("Score 1 : " + s1);
+            console.log("Getting Score 2 ...")
+            let s2 = await score2;
+            console.log("Score 2 : " + s2);
+            return [s1, s2];
+        }
+
+        let ans = fun2();
+        ans.then((value) => {
+            console.log(value);
+        })
+
+    </script>
+</body>
+
+</html>

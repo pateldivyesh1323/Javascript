@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <script>
+        let promptagain;
+        let age = Number();
+        let num = Number();
+        num = prompt("Enter a Number :");
+
+        if(num>4)
+        {
+            location.href = "https://google.com";
+        }
+
+        do{
+            age = prompt("Enter your Age :");
+            if(age<=0)
+            {
+                alert("Please Enter a valid age");
+                break;
+            }
+            if(age>=18)
+            {
+                alert("You can Drive");
+            }
+            else
+            {
+                alert("You cannot Drive");
+            }
+            promptagain = confirm("Do You want to see the prompt again?");
+        }while(promptagain)
+
+        let color = prompt("Enter the color :");
+        if(color == "black" || color == "Black")
+        {
+            document.body.style.background = color;
+            document.body.style.color = "white";
+        }
+        else
+        {
+            document.body.style.background = color;
+        }
+    </script>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi non earum eius facilis illum architecto ratione, velit iure recusandae nostrum quod minus, dolorum odio hic saepe repellendus veritatis, quaerat aliquid? At cupiditate aspernatur corrupti eius vero totam? Eveniet, non.
+</body>
+</html>

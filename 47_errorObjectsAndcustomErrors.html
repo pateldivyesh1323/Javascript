@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Objects and Custom errors</title>
+</head>
+<body>
+    
+    <script>
+        try{
+            console.log(Divyesh);
+            throw new Error("Divyesh is not available.")
+        }
+        catch(error){
+            console.log(error.message);
+            console.log(error.name);
+            console.log(error.stack);
+        }
+
+        // let age = prompt("Enter your Age : ");
+        // age = Number.parseInt(age);
+
+        // try{
+        //     if(age>150)
+        //     {
+        //         throw new Error("This is not True");
+        //     }
+        // }
+        // catch(error){
+        //     console.log(error);
+        // }
+    </script>
+</body>
+</html>

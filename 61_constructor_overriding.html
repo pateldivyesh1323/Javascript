@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Overriding</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            constructor(){
+                console.log("Employee Constructor")
+            }
+            login(){
+                console.log("Employee has logged in.");
+            }
+            logout(){
+                console.log("Employee has logged out.")
+            }
+            salary(x){
+                console.log(`Employee has requested salary Amount : '${x}'`)
+            }
+        }
+
+        class Programmer extends Employee{
+            // If there is no Constructor in child class then Javascript engine automatically creates a constructor as followed.
+            // If you are making a new constuctor in a child class then you must include super constructor or it will throw an error.
+            // constructor(...args)
+            // {
+            //     super(...args);
+            // }
+            requestCoffee(x)
+            {
+                console.log(`Programmer has requested ${x} Coffee.`);
+            }
+        }
+
+        let divyesh = new Programmer();
+        divyesh.login();
+        divyesh.salary(50000);
+    </script>
+</body>
+</html>

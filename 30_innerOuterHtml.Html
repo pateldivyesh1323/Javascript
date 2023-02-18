@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner,Outer HTML & Other Properties</title>
+</head>
+<body>
+    <span hidden>Hello World</span>
+    <span>Hello World</span>
+    <span id="changed">Hello World</span>
+    <script>
+        console.log(document.getElementsByTagName("span")[0]);
+        console.dir(document.getElementsByTagName("span")[0]);
+        console.log(document.body.firstElementChild.nodeName);
+        let a = document.getElementsByTagName("span")[1];
+        console.log(a.innerHTML);
+        let b = document.getElementsByTagName("span")[2];
+        console.log(b.outerHTML);
+        a.innerHTML = "This text is now changed.";
+        b.outerHTML = "<div id = \"changed\">This outer Html is changed from span to Div.</div>";
+        // console.log(document.body.textContent);
+    </script>
+</body>
+</html>

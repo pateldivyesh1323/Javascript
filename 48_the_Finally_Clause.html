@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Finally Clause</title>
+</head>
+<body>
+    
+    <script>
+        // Finally runs always.
+        // Finally will also run in case error() throws error.
+        // Finally will also run just before the return in case of a function.
+        const func=()=>{
+            try{
+                let a = 0;
+                a = b;
+                console.log("Program ran Successfully");
+            }
+            catch(error){
+                console.log(p);
+                console.log("This is an Error");
+            }
+            finally{ 
+                console.log("This will execute even if the code will throw error or not.")
+            }
+        }
+        func()
+    </script>
+</body>
+</html>

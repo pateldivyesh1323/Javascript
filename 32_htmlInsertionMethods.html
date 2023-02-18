@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Insertion Methods</title>
+</head>
+<body>
+    I am Outside before the Container.
+    <div class="container">
+        I am the Beggining of this <br>
+        <div id="first">I am the First Element inside the Container.</div>
+        I am the End of this Container.
+    </div>
+    <br>I am Outside after the Container.
+    <script>
+        let a = document.getElementsByTagName("div")[0].firstElementChild;
+        // a.innerHTML = a.innerHTML + "<h2>Hello World</h2>";
+        let div = document.getElementsByTagName("div")[0];
+        // div.append(a);
+        // div.prepend(a);
+        div.before(a);
+        // div.after(a);
+    </script>
+</body>
+</html>
