@@ -17,3 +17,6 @@ let a = [43,53,46,2,9,17,110,28,30,7,5];
 //     return value1+value2;
 // })
 // console.log(sum);
+
+// Find Method
+// Find method is used to find particular object equal to any particular item.
